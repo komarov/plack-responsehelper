@@ -50,7 +50,7 @@ sub respond($$) {
 __END__
 
 =head1 NAME
-    
+
 PlackX::ResponseHelper
 
 =head1 SYNOPSIS
@@ -92,6 +92,9 @@ Or if your app is even less sophisticated, just
 =head1 DESCRIPTION
 
 A very thin layer that abstracts Plack's specifics.
+
+Bundled with L<PlackX::ResponseHelper::JSON>, L<PlackX::ResponseHelper::Text>.
+More coming soon!
 
 =head1 METHODS
 

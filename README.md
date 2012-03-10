@@ -42,6 +42,9 @@ Or if your app is even less sophisticated, just
 
 A very thin layer that abstracts Plack's specifics.
 
+Bundled with [PlackX::ResponseHelper::JSON](http://search.cpan.org/perldoc?PlackX::ResponseHelper::JSON), [PlackX::ResponseHelper::Text](http://search.cpan.org/perldoc?PlackX::ResponseHelper::Text).
+More coming soon!
+
 # METHODS
 
 ## use options
