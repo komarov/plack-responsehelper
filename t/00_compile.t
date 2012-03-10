@@ -1,5 +1,5 @@
 use Test::More;
 
-use_ok(PlackX::ResponseHelper);
+use_ok(Plack::ResponseHelper);
 
 done_testing;

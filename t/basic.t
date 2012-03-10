@@ -1,7 +1,7 @@
 use Test::More;
 use Test::Exception;
 
-use PlackX::ResponseHelper;
+use Plack::ResponseHelper;
 
 dies_ok {
     respond abc => 'abc';

@@ -1,7 +1,7 @@
 use Test::More;
 use Test::Deep;
 
-use PlackX::ResponseHelper text => 'Text';
+use Plack::ResponseHelper text => 'Text';
 
 cmp_deeply(
     respond(text => 'abc'),

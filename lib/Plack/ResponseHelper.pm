@@ -1,4 +1,4 @@
-package PlackX::ResponseHelper;
+package Plack::ResponseHelper;
 use strict;
 use warnings;
 use Carp;
@@ -16,7 +16,7 @@ sub import {
         $helper =~ s/^\+//;
         croak "bad helper name $helper" unless $helper =~ /^\w+(?:::\w+)*$/;
 
-        my $package = "PlackX::ResponseHelper::$helper";
+        my $package = "Plack::ResponseHelper::$helper";
         eval "require $package" or croak $@;
 
         no strict 'refs';
@@ -51,7 +51,7 @@ __END__
 
 =head1 NAME
 
-PlackX::ResponseHelper
+Plack::ResponseHelper
 
 =head1 SYNOPSIS
 
@@ -60,8 +60,8 @@ You can treat it as a micro-framework:
 in app.psgi
 
     use Plack::Request;
-    use PlackX::ResponseHelper json => 'JSON',
-                               text => 'Text';
+    use Plack::ResponseHelper json => 'JSON',
+                              text => 'Text';
 
     my $app = sub {
         my $env = shift;
@@ -84,7 +84,7 @@ somewhere in your controllers
 
 Or if your app is even less sophisticated, just
 
-    use PlackX::ResponseHelper text => 'Text';
+    use Plack::ResponseHelper text => 'Text';
     sub {
         respond text => 'Hello world!';
     }
@@ -93,25 +93,25 @@ Or if your app is even less sophisticated, just
 
 A very thin layer that abstracts Plack's specifics.
 
-Bundled with L<PlackX::ResponseHelper::JSON>, L<PlackX::ResponseHelper::Text>.
+Bundled with L<Plack::ResponseHelper::JSON>, L<Plack::ResponseHelper::Text>.
 More coming soon!
 
 =head1 METHODS
 
 =head2 use options
 
-    use PlackX::ResponseHelper $type1 => $helper1, ...;
+    use Plack::ResponseHelper $type1 => $helper1, ...;
 
 Here you declare your types, it means that you have to use these types
 in your calls to C<respond>.
 
 C<< $helper >> is short helper's name, a plus sign can be used:
 
-    # will load PlackX::ResponseHelper::JSON
-    use PlackX::ResponseHelper json => 'JSON';
+    # will load Plack::ResponseHelper::JSON
+    use Plack::ResponseHelper json => 'JSON';
 
-    # will load PlackX::ResponseHelper::My::Helper
-    use PlackX::ResponseHelper my_helper => '+My::Helper';
+    # will load Plack::ResponseHelper::My::Helper
+    use Plack::ResponseHelper my_helper => '+My::Helper';
 
 =head2 respond
 
@@ -128,12 +128,12 @@ for processing the response data structure that is passed to C<respond>.
 For more complex helpers you may need to be able to customize their behaviour,
 this is achieved by passing an C<< $init >> parameter:
 
-    use PlackX::ResponseHelper my_helper => ['My::Helper', $init];
+    use Plack::ResponseHelper my_helper => ['My::Helper', $init];
 
 C<< $init >> can be anything that PX::RH::My::Helper supports, e.g. a code ref
 that returns some dynamic data, or just a hashref with configuration options.
 
-    package PlackX::ResponseHelper::My::Helper;
+    package Plack::ResponseHelper::My::Helper;
 
     sub helper {
         my $init = shift;

@@ -1,7 +1,7 @@
 use Test::More;
 use Test::Deep;
 
-use PlackX::ResponseHelper json => 'JSON';
+use Plack::ResponseHelper json => 'JSON';
 
 cmp_deeply(
     respond(json => [{abc => 1}]),

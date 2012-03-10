@@ -1,4 +1,4 @@
-use PlackX::ResponseHelper text => 'Text';
+use Plack::ResponseHelper text => 'Text';
 sub {
     respond text => 'Hello world!';
 }
