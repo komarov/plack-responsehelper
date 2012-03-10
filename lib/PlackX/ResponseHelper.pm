@@ -103,6 +103,7 @@ Here you declare your types, it means that you have to use these types
 in your calls to C<respond>.
 
 C<< $helper >> is short helper's name, a plus sign can be used:
+
     # will load PlackX::ResponseHelper::JSON
     use PlackX::ResponseHelper json => 'JSON';
 
