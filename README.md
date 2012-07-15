@@ -83,6 +83,8 @@ this is achieved by passing an `$init` parameter:
 that returns some dynamic data, or just a hashref with configuration options.
 
     package Plack::ResponseHelper::My::Helper;
+    use strict;
+    use warnings;
 
     sub helper {
         my $init = shift;
