@@ -93,7 +93,7 @@ Or if your app is even less sophisticated, just
 
 A very thin layer that abstracts Plack's specifics.
 
-Bundled with L<Plack::ResponseHelper::JSON>, L<Plack::ResponseHelper::Text>.
+Bundled with L<Plack::ResponseHelper::Attachment>, L<Plack::ResponseHelper::JSON>, L<Plack::ResponseHelper::Text>.
 More coming soon!
 
 =head1 METHODS
