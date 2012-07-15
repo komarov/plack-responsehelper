@@ -134,6 +134,8 @@ C<< $init >> can be anything that PX::RH::My::Helper supports, e.g. a code ref
 that returns some dynamic data, or just a hashref with configuration options.
 
     package Plack::ResponseHelper::My::Helper;
+    use strict;
+    use warnings;
 
     sub helper {
         my $init = shift;
