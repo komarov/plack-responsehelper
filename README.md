@@ -42,8 +42,11 @@ Or if your app is even less sophisticated, just
 
 A very thin layer that abstracts Plack's specifics.
 
-Bundled with [Plack::ResponseHelper::Attachment](http://search.cpan.org/perldoc?Plack::ResponseHelper::Attachment), [Plack::ResponseHelper::JSON](http://search.cpan.org/perldoc?Plack::ResponseHelper::JSON), [Plack::ResponseHelper::Text](http://search.cpan.org/perldoc?Plack::ResponseHelper::Text).
-More coming soon!
+Bundled with
+[Plack::ResponseHelper::Attachment](http://search.cpan.org/perldoc?Plack::ResponseHelper::Attachment),
+[Plack::ResponseHelper::JSON](http://search.cpan.org/perldoc?Plack::ResponseHelper::JSON),
+[Plack::ResponseHelper::Redirect](http://search.cpan.org/perldoc?Plack::ResponseHelper::Redirect),
+[Plack::ResponseHelper::Text](http://search.cpan.org/perldoc?Plack::ResponseHelper::Text).
 
 # METHODS
 
