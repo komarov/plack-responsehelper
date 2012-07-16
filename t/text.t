@@ -1,3 +1,8 @@
+use strict;
+use warnings;
+use utf8;
+
+use Encode;
 use Test::More;
 use Test::Deep;
 
@@ -19,7 +24,7 @@ cmp_deeply(
 ); 
 
 cmp_deeply(
-    respond(text => ['abc', 'def']),
+    respond(text => ['abc', 'def', 'ляляля']),
     [
         200,
         [
@@ -28,7 +33,8 @@ cmp_deeply(
         ],
         [
             'abc',
-            'def'
+            'def',
+            encode('utf-8', 'ляляля')
         ]
     ],
     'arrayref'

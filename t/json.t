@@ -9,7 +9,7 @@ cmp_deeply(
         200,
         [
             'Content-Type',
-            'application/json'
+            'application/json; charset=utf-8'
         ],
         [
             '[{"abc":1}]'

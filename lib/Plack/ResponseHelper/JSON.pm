@@ -8,9 +8,9 @@ use Plack::Response;
 sub helper {
     return sub {
         my $r = shift;
-        my $body = to_json $r;
+        my $body = encode_json $r;
         my $response = Plack::Response->new(200);
-        $response->content_type('application/json');
+        $response->content_type('application/json; charset=utf-8');
         $response->body($body);
         return $response;
     };
