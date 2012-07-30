@@ -1,3 +1,6 @@
+0.04
+Added support for default_status, default_location in P::RH::Redirect
+
 0.03
 Added P::RH::Redirect
 
