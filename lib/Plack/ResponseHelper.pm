@@ -29,7 +29,7 @@ sub import {
     *{$pkg.'::respond'} = \&respond;
 }
 
-sub respond($$) {
+sub respond {
     my $type = shift;
     my $r = shift;
 

@@ -1,7 +1,7 @@
 use inc::Module::Install;
 
 name          'Plack-ResponseHelper';
-version       '0.03';
+version       '0.05';
 author        'Oleg Komarov <komarov@cpan.org>';
 
 all_from      'lib/Plack/ResponseHelper.pm';

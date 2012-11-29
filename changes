@@ -1,3 +1,6 @@
+0.05
+Removed respond's prototype
+
 0.04
 Added support for default_status, default_location in P::RH::Redirect
 
